@@ -1,0 +1,229 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    tools:context=".FilterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/baseline_close_24"
+                android:id="@+id/btnClose"
+                app:tint="#111111" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Filters"
+                android:textSize="20sp"
+                android:textColor="#333333"
+                android:gravity="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear all"
+                android:textSize="14sp"
+                android:textColor="#FF6347"
+                android:id="@+id/btnClearAll" />
+        </LinearLayout>
+
+        <!-- Filters Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textSize="16sp"
+            android:paddingVertical="8dp"
+            android:textColor="#555555"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/spinnerLocation"
+            android:background="@drawable/spinner_background"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:textSize="16sp"
+            android:paddingVertical="8dp"
+            android:textColor="#555555"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/spinnerType"
+            android:background="@drawable/spinner_background"/>
+
+        <!-- Price Filters -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:textSize="16sp"
+            android:paddingVertical="8dp"
+            android:textColor="#555555" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/priceMin"
+                android:hint="Min"
+                android:inputType="number"
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Max"
+                android:id="@+id/priceMax"
+
+                android:inputType="number"
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Area Filters -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Area (m²)"
+            android:textSize="16sp"
+            android:paddingVertical="8dp"
+            android:textColor="#555555" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/areaMin"
+                android:hint="Min"
+                android:inputType="number"
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Max"
+                android:inputType="number"
+                android:id="@+id/areaMax"
+
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Down Payment Filters -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Down Payment"
+            android:textSize="16sp"
+            android:paddingVertical="8dp"
+            android:textColor="#555555" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/downPaymentMin"
+                android:hint="Min"
+                android:inputType="number"
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Max"
+                android:id="@+id/downPaymentMax"
+
+                android:inputType="number"
+                android:background="@drawable/edittext_background"
+                android:padding="12dp"
+                android:layout_marginStart="8dp"/>
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bathrooms"
+            android:textSize="16sp"
+            android:paddingVertical="8dp"
+            android:textColor="#555555" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/spinnerBathrooms"
+            android:background="@drawable/spinner_background" />
+
+        <!-- Bedrooms Filter -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bedrooms"
+            android:textSize="16sp"
+            android:paddingVertical="8dp"
+            android:textColor="#555555" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/spinnerBedrooms"
+            android:background="@drawable/spinner_background"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="See 10,000+ results"
+            android:backgroundTint="#F81111"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"
+            android:id="@+id/btnSeeResult"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+</ScrollView>

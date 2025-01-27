@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Gradient background -->
+    <gradient
+        android:angle="45"
+        android:startColor="#F0F0F0"
+    android:endColor="#FFFFFF"
+    android:type="linear" />
+
+    <!-- Rounded corners -->
+    <corners android:radius="12dp" /> <!-- More pronounced rounded corners -->
+
+    <!-- Border with a subtle shadow effect -->
+    <stroke
+        android:color="#B0B0B0"
+    android:width="1.5dp" />
+
+    <!-- Add inner shadow effect for depth -->
+    <padding
+        android:left="2dp"
+        android:top="2dp"
+        android:right="2dp"
+        android:bottom="2dp" />
+</shape>

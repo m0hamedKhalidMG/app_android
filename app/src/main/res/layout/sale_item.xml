@@ -1,0 +1,156 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="2dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginStart="10dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Image at the top -->
+        <ImageView
+            android:id="@+id/imageViewAd"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="Chalet with garden for sale in Makadi Heights"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg4" />
+
+        <!-- Content below the image -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageButton
+                android:id="@+id/imageButtonFavorite"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:src="@drawable/baseline_favorite_border_24" />
+
+            <TextView
+                android:id="@+id/textViewPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="4dp"
+                android:text="EGP 9,000,000"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewPrice"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="Apartment for sale inside Village West Dorra Compound..."
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textViewLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewDetails"
+                android:layout_marginTop="4dp"
+                android:text="Sheikh Zayed, Giza"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp" />
+
+            <!-- Section for Bed, Bathroom, and Area -->
+            <LinearLayout
+                android:id="@+id/featuresSection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewLocation"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/bedIcon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="Bed Icon"
+                    android:src="@drawable/bed" />
+
+                <TextView
+                    android:id="@+id/bedCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/bathroomIcon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="Bathroom Icon"
+                    android:src="@drawable/bath" />
+
+                <TextView
+                    android:id="@+id/bathroomCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/areaIcon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="Area Icon"
+                    android:src="@drawable/area" />
+
+                <TextView
+                    android:id="@+id/areaValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="135 m²"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewDatePublished"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/featuresSection"
+                android:layout_marginTop="4dp"
+                android:text="Jan 1, 2025"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textViewCompanyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/featuresSection"
+                android:layout_marginTop="4dp"
+                android:text="RealEstate Co."
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

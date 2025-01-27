@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/favorite"
+        android:icon="@drawable/baseline_favorite_border_24"
+        android:title="Favorite"
+        android:iconTint="@color/white"
+        android:titleTextColor="@color/white" />
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/baseline_person_24"
+        android:title="Profile"
+        android:iconTint="@color/white"
+        android:titleTextColor="@color/white" />
+
+    <item
+        android:id="@+id/docs"
+        android:icon="@drawable/baseline_upload_file_24"
+        android:title="Docs"
+        android:iconTint="@color/white"
+        android:titleTextColor="@color/white" />
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Home"
+        android:iconTint="@color/white"
+        android:titleTextColor="@color/white" />
+</menu>
