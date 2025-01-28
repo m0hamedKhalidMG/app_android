@@ -6,7 +6,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".MoreDetailsActivity">
+    tools:context=".MoreDetailsActivity"
+    android:id="@+id/rootLayout">
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="14dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_arrow_back_24dp"
+        android:contentDescription="Go Back"
+        android:clickable="true"
+        android:focusable="true"
+        app:tint="@android:color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:elevation="10dp"
+        tools:ignore="MissingConstraints" />
+
 
     <!-- Image Section -->
     <FrameLayout
@@ -209,6 +226,46 @@
                 android:paddingTop="8dp"
                 android:textDirection="rtl"
                 android:gravity="right" />
+
+            <!-- Company Profile Section -->
+            <LinearLayout
+                android:id="@+id/companyProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/company_profile_background"
+                android:elevation="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintBottom_toTopOf="@id/reserveButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/companyIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/companyprofile"
+                    android:contentDescription="Company Icon"
+                    android:layout_marginEnd="12dp"
+                    android:padding="4dp"
+                    app:tint="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/companyText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Visit Us"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+
+
         </LinearLayout>
 
 

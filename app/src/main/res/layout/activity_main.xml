@@ -5,9 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg4"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:id="@+id/rootLayout">
 
-    <ScrollView
+
+<ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center">

@@ -1,5 +1,6 @@
 package com.example.ejargoplus;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +32,14 @@ public class AdAdapter extends RecyclerView.Adapter<AdAdapter.AdViewHolder> {
         holder.details.setText(ad.getDetails());
         holder.location.setText(ad.getLocation());
         holder.image.setImageResource(ad.getImageResId());
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(v.getContext(), MoreDetailsActivity.class);
+            intent.putExtra("adPrice", ad.getPrice());
+            intent.putExtra("adDetails", ad.getDetails());
+            intent.putExtra("adLocation", ad.getLocation());
+            intent.putExtra("adImageResId", ad.getImageResId());
+            v.getContext().startActivity(intent);
+        });
     }
 
     @Override

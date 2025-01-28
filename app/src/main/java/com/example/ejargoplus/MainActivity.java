@@ -15,6 +15,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+        View rootView = findViewById(R.id.rootLayout);
+        rootView.setOnApplyWindowInsetsListener((view, insets) -> {
+            int statusBarHeight = insets.getSystemWindowInsetTop(); // الحصول على ارتفاع شريط الحالة
+            view.setPadding(0, statusBarHeight, 0, 0); // إضافة مساحة علوية
+            return insets;
+        });
     }
 
     // This method is called when the TextView is clicked

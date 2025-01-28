@@ -25,7 +25,13 @@ public class FilterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filter);
+        View rootView = findViewById(R.id.rootLayout);
 
+        rootView.setOnApplyWindowInsetsListener((view, insets) -> {
+            int statusBarHeight = insets.getSystemWindowInsetTop();
+            view.setPadding(0, statusBarHeight, 0, 0); // إضافة مساحة علوية
+            return insets;
+        });
         // Initialize views
         spinnerLocation = findViewById(R.id.spinnerLocation);
         spinnerType = findViewById(R.id.spinnerType);

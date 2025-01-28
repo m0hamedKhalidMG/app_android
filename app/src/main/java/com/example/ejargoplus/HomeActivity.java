@@ -2,6 +2,9 @@ package com.example.ejargoplus;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,7 +25,31 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_home);
+        Button addFundsButton = findViewById(R.id.addFundsButton);
+        addFundsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to the Fund page
+                Intent intent = new Intent(HomeActivity.this, RequestFundActivity.class);
+                startActivity(intent);
+            }
+        });
+        View rootView = findViewById(R.id.rootLayout);
 
+        rootView.setOnApplyWindowInsetsListener((view, insets) -> {
+            int statusBarHeight = insets.getSystemWindowInsetTop();
+            view.setPadding(0, statusBarHeight, 0, 0); // إضافة مساحة علوية
+            return insets;
+        });
+        TextView seeAllVillasForSale = findViewById(R.id.seeAllVillasForSale);
+        seeAllVillasForSale.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to the DetailsActivity
+                Intent intent = new Intent(HomeActivity.this, featuresActivity.class);
+                startActivity(intent);
+            }
+        });
         // Setting up Ads RecyclerView
         RecyclerView recyclerView = findViewById(R.id.saleRecyclerView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
