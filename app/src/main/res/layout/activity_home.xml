@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".HomeActivity">
+    tools:context=".HomeActivity"
+    android:id="@+id/rootLayout">
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
@@ -191,13 +192,17 @@
                     android:layout_height="wrap_content"
                     android:text="See all"
                     android:textSize="14sp"
-                    android:textColor="#6200EE" />
+                    android:textColor="#6200EE"
+                    android:clickable="true"
+                    android:focusable="true" />
+
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/saleRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
                 android:layout_marginTop="8dp" />
 
 

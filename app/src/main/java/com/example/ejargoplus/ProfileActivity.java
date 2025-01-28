@@ -19,7 +19,12 @@ public class ProfileActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_profile);
         ImageView ivBack = findViewById(R.id.iv_back);
-
+        View rootView = findViewById(R.id.rootLayout);
+        rootView.setOnApplyWindowInsetsListener((view, insets) -> {
+            int statusBarHeight = insets.getSystemWindowInsetTop(); // الحصول على ارتفاع شريط الحالة
+            view.setPadding(0, statusBarHeight, 0, 0); // إضافة مساحة علوية
+            return insets;
+        });
         // Set a click listener
         ivBack.setOnClickListener(view -> {
             // Navigate to the home screen

@@ -1,9 +1,12 @@
 package com.example.ejargoplus;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -25,6 +28,31 @@ public class MoreDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_more_details);
+        LinearLayout companyProfile = findViewById(R.id.companyProfile);
+
+        // Set click listener
+        companyProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to the ProfileActivity
+                Intent intent = new Intent(MoreDetailsActivity.this, ProfileDeveloperActivity.class);
+                startActivity(intent);
+            }
+        });
+        View rootView = findViewById(R.id.rootLayout);
+        rootView.setOnApplyWindowInsetsListener((view, insets) -> {
+            int statusBarHeight = insets.getSystemWindowInsetTop(); // الحصول على ارتفاع شريط الحالة
+            view.setPadding(0, statusBarHeight, 0, 0); // إضافة مساحة علوية
+            return insets;
+        });
+        ImageView backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Finish the current activity
+                finish();
+            }
+        });
         imageNumber = findViewById(R.id.imageNumber);
         cameraIcon = findViewById(R.id.cameraIcon);
             sharedPreferences = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
